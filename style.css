@@ -109,3 +109,8 @@ body {
     width: 350px;
     display: none;
 }
+@media screen and (max-width:480px) {
+    .qr-img {
+        width: 300px;
+    }
+}

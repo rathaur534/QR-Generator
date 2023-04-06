@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2b303a;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 95%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.heading {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.title,
+.sub-title {
+    font-size: 4rem;
+    font-family: "Poppins", sans-serif;
+    color: #eee5e9;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    color: #eee5e9;
+    opacity: 0.5;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.user-input label {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.user-input input {
+    width: 80%;
+    max-width: 35rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #7c7c7c;
+    text-align: center;
+    padding: 0.7rem 1rem;
+    margin: 1rem 1rem 2rem 1rem;
+    font-size: 1.5rem;
+}
+
+::placeholder {
+    color: #2b303a;
+}
+
+.button {
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1rem;
+    margin-bottom: 3rem;
+    background-color: #92dce5;
+    color: #12130F;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1rem;
+    margin-bottom: 3rem;
+    /* background-color: #92dce5; */
+    color: #12130F;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 80px;
+    top: 15px;
+    display: none;
+}
+
+.qr-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* display: none; */
+}
+
+.qr-img {
+    border: 20px solid #7c7c7c33;
+    border-radius: 20px;
+    width: 350px;
+    display: none;
+}

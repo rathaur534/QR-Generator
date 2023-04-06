@@ -9,10 +9,6 @@ function qrcode(content) {
     img.src = src;
     img.style.display = "block";
     downbtn.style.display = "block";
-
-
-
-
 }
 btn.addEventListener("click", () => {
     if (input_box.value === "") {
@@ -21,18 +17,19 @@ btn.addEventListener("click", () => {
         qrcode(input_box.value);
     }
 });
+async function downloadImage(imageSrc) {
+    const image = await fetch(imageSrc)
+    const imageBlog = await image.blob()
+    const imageURL = URL.createObjectURL(imageBlog)
 
-function downloadQR() {
-    let image = document.querySelector('.qr-image').querySelector('img').src;
-    let link = document.createElement("a");
-    link.download = "qr_code.png";
-    link.href = image;
-    document.body.appendChild(link);
-    link.click();
+    const link = document.createElement('a')
+    link.href = imageURL
+    link.download = 'qr_code.png'
+    document.body.appendChild(link)
+    link.click()
     document.body.removeChild(link);
-    delete link;
-
 }
+
 downbtn.addEventListener('click', () => {
-    downloadQR();
+    downloadImage(img.src);
 });
